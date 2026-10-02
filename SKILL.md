@@ -9,11 +9,11 @@ Keep repository-local guidance aligned with its actual applicability.
 
 ## Core rule
 
-Express guidance at the narrowest scopes where it applies consistently.
+Express applicability at the narrowest scopes where guidance applies consistently.
 
-When guidance is defined directly in a local `SKILL.md`, its directory scope expresses where that guidance applies.
+Use directory placement when guidance applies throughout that directory scope.
 
-Use a broader directory scope only when the guidance applies consistently throughout that scope.
+Use explicit applicability declarations when shared guidance applies to separate scopes.
 
 Do not broaden applicability to a common ancestor merely because separate subtrees share the same guidance.
 
@@ -27,7 +27,7 @@ Keep scopes where the guidance does not apply outside those applicability declar
 
 Do not duplicate shared guidance across local `SKILL.md` files.
 
-The location of the canonical definition does not by itself broaden where the guidance applies.
+The location of the canonical definition does not by itself determine where the guidance applies.
 
 ## Split guidance by scope
 
@@ -43,8 +43,8 @@ When reviewing a `SKILL.md`:
 
 1. Identify what each piece of guidance governs.
 2. Identify the directory scopes where that guidance applies consistently.
-3. Keep guidance local when those scopes form one consistently governed subtree.
+3. Use directory placement when one subtree is governed consistently.
 4. Keep one canonical definition and declare it applicable within each separate scope where it applies.
 5. Split guidance when applicability requires different rules across scopes.
 
-Keep each local `SKILL.md` focused on guidance that applies to its directory scope.
+Keep each local `SKILL.md` focused on guidance that applies to its directory scope or declares shared guidance applicable there.
