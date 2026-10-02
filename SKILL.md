@@ -1,19 +1,21 @@
 ---
 name: scope-aligned-guidance
-description: Place repository-local SKILL.md guidance at scopes that match where the guidance applies, including sharing one definition across separate directory scopes without broadening its applicability. Use when creating, moving, splitting, sharing, or reviewing directory-local SKILL.md files.
+description: Align repository-local SKILL.md guidance with the scopes where it applies, including sharing one definition across separate directory scopes without broadening its applicability. Use when creating, moving, splitting, sharing, or reviewing directory-local SKILL.md files.
 ---
 
 # Scope-aligned guidance
 
-Place repository-local guidance where its effective scope matches its actual applicability.
+Keep repository-local guidance aligned with its actual applicability.
 
 ## Core rule
 
-Place guidance at the narrowest scope where it applies consistently.
+Express guidance at the narrowest scopes where it applies consistently.
 
-Use a broader directory only when the guidance applies consistently throughout that broader directory scope.
+When guidance is defined directly in a local `SKILL.md`, its directory scope expresses where that guidance applies.
 
-Do not move guidance to a common ancestor merely because separate subtrees share it.
+Use a broader directory scope only when the guidance applies consistently throughout that scope.
+
+Do not broaden applicability to a common ancestor merely because separate subtrees share the same guidance.
 
 ## Share guidance across separate scopes
 
@@ -29,7 +31,7 @@ The location of the canonical definition does not by itself broaden where the gu
 
 ## Split guidance by scope
 
-When the same decision requires different guidance across directory scopes, place each guidance at the scope where it applies.
+When the same decision requires different guidance across directory scopes, express each variant within the scope where it applies.
 
 Use directory placement and explicit applicability declarations to express where guidance applies.
 
