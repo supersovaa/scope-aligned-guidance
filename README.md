@@ -1,29 +1,37 @@
 # scope-aligned-guidance
 
-A lightweight skill for placing repository-local `SKILL.md` guidance at directory scopes that match where the guidance actually applies.
+A lightweight skill for placing and routing repository-local `SKILL.md` guidance at scopes that match where the guidance actually applies.
 
 ## Core idea
 
-Place guidance at the narrowest directory shared by everything it governs.
+Use directory-local `SKILL.md` files for guidance tied to a target subtree.
 
-When the same decision requires different guidance across directory scopes, place each guidance at the scope where it applies.
+Use work-phase `SKILL.md` entry points for guidance that must be selected by the activity being performed, such as review, implementation, or planning.
 
-The directory structure expresses applicability, keeping each `SKILL.md` internally consistent.
+When both dimensions matter, apply both: the phase entry point selects work-specific guidance, while the directory-local file supplies target-specific rules.
+
+Keep shared guidance canonical and route to it instead of duplicating it.
 
 ## Example
 
 ```text
 repo/
-├── SKILL.md
-├── parser/
-│   └── SKILL.md
-└── compiler/
-    └── SKILL.md
+├── AGENTS.md
+├── skills/
+│   ├── review/
+│   │   └── SKILL.md
+│   └── implementation/
+│       └── SKILL.md
+└── docs/
+    └── implementation/
+        └── SKILL.md
 ```
 
-Use the repository-root `SKILL.md` for guidance shared across the repository.
+Use `AGENTS.md` as a lightweight router to the relevant work-phase entry point.
 
-Use directory-local `SKILL.md` files where a subtree has guidance specific to that scope.
+Use `skills/review/SKILL.md` when review work begins and `skills/implementation/SKILL.md` when implementation begins.
+
+If the work targets `docs/implementation/`, also apply that directory-local `SKILL.md`.
 
 ## Files
 
