@@ -1,29 +1,39 @@
 # scope-aligned-guidance
 
-A lightweight skill for placing repository-local `SKILL.md` guidance at directory scopes that match where the guidance actually applies.
+A lightweight skill for placing repository-local guidance where it applies and routing users and agents to canonical guidance from clear, concrete entry points.
 
 ## Core idea
 
-Place guidance at the narrowest directory shared by everything it governs.
+Keep each rule defined in one canonical place.
 
-When the same decision requires different guidance across directory scopes, place each guidance at the scope where it applies.
+Place references to that canonical definition wherever the rule actually applies.
 
-The directory structure expresses applicability, keeping each `SKILL.md` internally consistent.
+Repeated links are useful routing, not duplicate rule definitions.
+
+Prefer entry conditions that describe concrete work or decisions, and keep the route from that entry point to the required guidance explicit and shallow.
 
 ## Example
 
 ```text
 repo/
-├── SKILL.md
-├── parser/
-│   └── SKILL.md
-└── compiler/
+├── AGENTS.md
+├── .agents/
+│   └── tasks/
+│       ├── planning/
+│       │   └── SKILL.md
+│       └── review/
+│           └── SKILL.md
+└── docs/
     └── SKILL.md
 ```
 
-Use the repository-root `SKILL.md` for guidance shared across the repository.
+A shared writing rule can remain canonical in its external skill while both `planning/SKILL.md` and `review/SKILL.md` link to it directly.
 
-Use directory-local `SKILL.md` files where a subtree has guidance specific to that scope.
+`AGENTS.md` can also link to the same canonical rule when normal repository interaction needs it.
+
+Directory placement expresses applicability when one subtree is governed consistently.
+
+Task or root routing files express applicability when a work type or decision is the clearer entry point.
 
 ## Files
 
