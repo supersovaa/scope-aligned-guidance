@@ -15,7 +15,8 @@ This document records decisions from the ongoing design grill. It is a provision
 9. **Supporting operations (Q9):** Work supporting the active work type does not independently activate another work-type skill. For example, tests written as part of executing an implementation plan remain under implementation guidance; independent testing work activates testing guidance.
 10. **Reviewing (Q10):** Review work activates review guidance without also loading the execution skill for the reviewed work. Review obligations belong in review guidance and are evaluated against the appropriate canonical requirements, design, plan, results, and test evidence.
 11. **Review obligations (Q11):** Review checks correctness of the deliverable and compliance with important execution procedures. Keep review-specific audit obligations under review guidance, without automatically activating implementation execution procedures.
-12. **Selective routing remains intentional:** Maintain task-scoped and directory-scoped entry points to avoid reading irrelevant skills. The number of files or repeated links to one canonical skill is not independently a defect.
+12. **Q12 — Review references:** A review may consult a relevant criterion from an implementation-time skill as source material without applying its implementation workflow. Keep that criterion at its existing canonical location.
+13. **Selective routing remains intentional:** Maintain task-scoped and directory-scoped entry points to avoid reading irrelevant skills. The number of files or repeated links to one canonical skill is not independently a defect.
 
 ## Evidence from target use repository
 
@@ -25,7 +26,6 @@ A historical revision (PR #399) introduced per-judgment conditions and recheck t
 
 ## Unresolved
 
-- When an audit criterion is defined only in an implementation-time skill, choose whether review should consult it as a source or the criterion should be made independently available from a canonical shared definition.
 - How to express recognizable work-type triggers while keeping selective loading.
 - How to word the resulting changes in `SKILL.md` and `README.md`.
 
