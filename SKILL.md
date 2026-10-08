@@ -19,7 +19,7 @@ Keep one canonical definition for each rule.
 
 Place references to that definition at every concrete entry point where the rule applies.
 
-Choose entry conditions that can be recognized directly from the current work or decision.
+Choose activation conditions from the recognizable purpose and responsibility of the work, including work necessary to fulfill the request even when not explicitly named. Use work types as the default activation units rather than conditions tied to individual decisions during execution.
 
 ## Share guidance across separate scopes
 
@@ -35,9 +35,19 @@ The location of the canonical definition does not by itself determine where the 
 
 ## Route from concrete entry points
 
-Route from a concrete work type or decision directly to the canonical guidance that governs it.
+Route each recognizable work type directly to the canonical guidance needed to perform it.
 
-Prefer shallow routes with explicit triggers.
+Identify all work types implied by a request. At the beginning of each work type, read the public skills linked by its entry point; apply the task guidance for the current work type, along with applicable directory-local guidance, while performing it. Activate a newly identified work type when its work begins.
+
+Keep supporting operations under the current work type. For example, creating tests while carrying out an implementation plan remains implementation work; separately undertaken testing uses the testing entry point.
+
+When work differs substantially in responsibility or in the public skills it needs, create distinct recognizable work-type entries. Do not split entry points for every internal action or judgment.
+
+Link every public skill needed by a work type from that work type's entry, even if several entries link to the same canonical skill.
+
+When reviewing a deliverable, apply review guidance to check correctness and important execution obligations. Consult an execution skill as source material only when it is the available definition of a required audit criterion; consulting it does not activate its execution instructions.
+
+Prefer shallow routes with explicit work-type triggers.
 
 When a task skill, directory skill, or `AGENTS.md` entry already describes the applicable work, link the canonical guidance from that entry.
 
@@ -60,9 +70,10 @@ When reviewing repository-local guidance:
 1. Identify what each piece of guidance governs.
 2. Identify the directory or task scopes where that guidance applies consistently.
 3. Keep one canonical definition for each shared rule.
-4. Identify the concrete work or decision entry points from which the rule must be discovered.
+4. Identify recognizable work-type or directory entry points from which the rule must be discovered.
 5. Link each applicable entry point directly to the canonical definition.
 6. Keep routing explicit and shallow.
-7. Split guidance when applicability requires different rules across scopes.
+7. Separate work types when their responsibilities or required public skills substantially differ.
+8. Validate that work types are activated at their start and that supporting operations remain with their owning work type.
 
 Keep each local routing file focused on guidance that applies to its scope or on direct references to shared canonical guidance.
