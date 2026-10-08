@@ -37,7 +37,7 @@ The location of the canonical definition does not by itself determine where the 
 
 Route each recognizable work type directly to the canonical guidance needed to perform it.
 
-Identify all work types implied by a request. At the beginning of each work type, read the public skills linked by its entry point; apply only the guidance for that work type while performing it. Activate a newly identified work type when its work begins.
+Identify all work types implied by a request. At the beginning of each work type, read the public skills linked by its entry point; apply the task guidance for the current work type, along with applicable directory-local guidance, while performing it. Activate a newly identified work type when its work begins.
 
 Keep supporting operations under the current work type. For example, creating tests while carrying out an implementation plan remains implementation work; separately undertaken testing uses the testing entry point.
 
