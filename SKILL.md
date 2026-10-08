@@ -1,6 +1,6 @@
 ---
 name: scope-aligned-guidance
-description: Make repository-local guidance activate for the right tasks and scopes and route to canonical rules. Use when agents miss or over-apply rules or skills, or when creating, moving, splitting, sharing, routing, or reviewing AGENTS.md, SKILL.md, or other repository instructions across work types and directories.
+description: Align repository-local guidance with the tasks that activate it, the scopes where it applies, and direct routes to canonical rules. Use when repository skills or AGENTS.md guidance are missed or invoked too broadly, or when placing, splitting, sharing, routing, or reviewing guidance across work types and directories.
 ---
 
 # Scope-aligned guidance
