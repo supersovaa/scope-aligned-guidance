@@ -1,6 +1,6 @@
-# Activation granularity design (Draft)
+# Activation granularity design
 
-This document records decisions from the ongoing design grill. It is a provisional design artifact, not an active skill rule.
+This document records the agreed work-type activation design. The operational rules are defined in `SKILL.md`.
 
 ## Decided
 
@@ -26,8 +26,7 @@ A historical revision (PR #399) introduced per-judgment conditions and recheck t
 
 ## Unresolved
 
-- How to express recognizable work-type triggers while keeping selective loading.
-- How to word the resulting changes in `SKILL.md` and `README.md`.
+None.
 
 ## Deferred
 
