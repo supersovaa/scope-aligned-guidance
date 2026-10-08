@@ -1,20 +1,18 @@
 # scope-aligned-guidance
 
-A lightweight skill for placing repository-local guidance where it applies and routing users and agents to canonical guidance from clear, concrete entry points.
+A lightweight skill for placing repository-local guidance where it is needed and routing users and agents to canonical guidance from concrete work-type and directory entry points.
 
 ## Core idea
 
-Keep each rule defined in one canonical place.
+Make the guidance needed for each work type directly accessible from its entry point.
 
-Place references to that canonical definition wherever the rule actually applies.
-
-Repeated links are useful routing, not duplicate rule definitions.
+Keep each rule defined in one canonical place and link it from the entry points that need it.
 
 Prefer activation conditions based on recognizable work types and responsibilities, including work implied by a request, rather than individual decisions made during execution.
 
 For each work type, link the public skills needed for that work directly from its entry point. Read those skills when that work begins. A request involving several work types uses them in sequence; supporting operations remain under their current work type.
 
-Split work-type entries when their responsibilities or needed skills differ substantially. Repeated links to a canonical skill are intentional. Directory-local guidance remains scoped to its directory.
+Split work-type entries when their responsibilities or needed skills differ substantially. Directory-local guidance remains scoped to its directory.
 
 During review, apply review guidance. If an important audit criterion exists only in an execution skill, consult that criterion as source material without activating the execution procedure.
 
@@ -35,13 +33,11 @@ repo/
     └── SKILL.md
 ```
 
-A shared writing rule can remain canonical in its external skill while both `planning/SKILL.md` and `review/SKILL.md` link to it directly.
+`planning/SKILL.md` links directly to guidance needed for planning work. `review/SKILL.md` links directly to guidance needed for reviews. Neither entry point requires the other's task-specific guidance.
 
-`AGENTS.md` can also link to the same canonical rule when normal repository interaction needs it.
+`docs/SKILL.md` provides guidance needed throughout `docs/`.
 
-Directory placement expresses applicability when one subtree is governed consistently.
-
-Task or root routing files express applicability when a work type is the clearer entry point.
+`AGENTS.md` can point to the planning and review entry points without making their task-specific guidance mandatory for all repository work.
 
 ## Installation
 
