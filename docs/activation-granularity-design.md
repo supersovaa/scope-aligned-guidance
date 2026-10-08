@@ -12,7 +12,9 @@ This document records decisions from the ongoing design grill. It is a provision
 6. **Work-type-first loading (Q6):** At the beginning of each selected work type, read and apply the public skills attached to that work type. Do not apply all skills for the entire user request simultaneously. If different work requires a substantively different skill set, split the work types instead of adding fine-grained per-skill activation conditions.
 7. **Shared public skills (Q7):** Link a public skill from each work-type entry where it applies. Multiple work-type entries may refer to the same canonical public skill. Do not introduce a shared mandatory-reading entry solely to deduplicate references.
 8. **Multiple work types (Q8):** Identify all work types implied by the request, carry out their work in sequence where appropriate, and activate only the guidance applicable to the work type currently being performed. For example, while implementing, apply the implementation skill; the skills for a subsequent distinct testing or review stage are activated when that stage begins.
-9. **Selective routing remains intentional:** Maintain task-scoped and directory-scoped entry points to avoid reading irrelevant skills. The number of files or repeated links to one canonical skill is not independently a defect.
+9. **Supporting operations (Q9):** Work supporting the active work type does not independently activate another work-type skill. For example, tests written as part of executing an implementation plan remain under implementation guidance; independent testing work activates testing guidance.
+10. **Reviewing (Q10):** Review work activates review guidance without also loading the execution skill for the reviewed work. Review obligations belong in review guidance and are evaluated against the appropriate canonical requirements, design, plan, results, and test evidence.
+11. **Selective routing remains intentional:** Maintain task-scoped and directory-scoped entry points to avoid reading irrelevant skills. The number of files or repeated links to one canonical skill is not independently a defect.
 
 ## Evidence from target use repository
 
@@ -22,7 +24,7 @@ A historical revision (PR #399) introduced per-judgment conditions and recheck t
 
 ## Unresolved
 
-- How to distinguish a supporting action within a work type from a separate work type that warrants switching skills.
+- Which execution-procedure obligations, if any, need explicit checking during review, and where those checks are defined.
 - How to express recognizable work-type triggers while keeping selective loading.
 - How to word the resulting changes in `SKILL.md` and `README.md`.
 
