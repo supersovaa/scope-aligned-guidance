@@ -1,0 +1,28 @@
+# Activation granularity design (Draft)
+
+This document records decisions from the ongoing design grill. It is a provisional design artifact, not an active skill rule.
+
+## Decided
+
+1. **Target:** Improve how `scope-aligned-guidance` guides the activation conditions of *other skills*. Broadening this skill's own activation is not the objective.
+2. **Timing:** Prefer selecting applicable skills from the initial user request. If a need becomes apparent only during execution, activate the necessary skill before the relevant work.
+3. **Implicit need:** Include tasks and decisions reasonably necessary to fulfill the request even if they were not stated explicitly; relevance alone is insufficient.
+4. **Activation unit:** Use recognizable work types rather than highly specific individual judgments. Work types may be meaningfully fine-grained where that preserves selective skill loading.
+5. **Work-type splitting:** Separate work-type entries when their main responsibilities or needed public skills substantively differ and the tasks can be recognized separately. Do not split solely for every individual operation or judgment.
+6. **Selective routing remains intentional:** Maintain task-scoped and directory-scoped entry points to avoid reading irrelevant skills. The number of files or repeated links to one canonical skill is not independently a defect.
+
+## Evidence from target use repository
+
+In `supersovaa/battle-spirits-standard-simulator`, the `master` branch routes work types through `AGENTS.md`, task skills under `.agents/tasks/`, and directory guidance such as `docs/**/SKILL.md`.
+
+A historical revision (PR #399) introduced per-judgment conditions and recheck timing. A later revision (PR #415) removed an intermediate cross-cutting router while preserving direct links from applicable entry points. Those links support selective loading and are not, by themselves, a reason to collapse task files.
+
+## Unresolved
+
+- Which referenced skills within an already selected work-type entry should load at work start, and which should remain conditional.
+- How to express the activation criteria with enough specificity to exclude genuinely unrelated skills, without requiring agents to anticipate fine-grained implementation decisions.
+- How to word the resulting changes in `SKILL.md` and `README.md`.
+
+## Deferred
+
+None.
