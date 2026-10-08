@@ -1,16 +1,16 @@
 # scope-aligned-guidance
 
-A lightweight skill for placing repository-local guidance where it applies and routing users and agents to canonical guidance from clear, concrete entry points.
+A lightweight skill for making repository-local guidance activatable for the relevant work, applicable only in the right scopes, and directly routed to canonical guidance.
 
 ## Core idea
 
-Keep each rule defined in one canonical place.
+Separate three questions: can the agent recognize when guidance is needed (activation), where does it apply (applicability), and how does the selected entry point reach its canonical definition (routing)?
 
-Place references to that canonical definition wherever the rule actually applies.
+Make activation conditions recognizable from a user request, work type, or decision. For metadata-selected skills, the frontmatter `description` must advertise that work before the skill body is loaded. A link inside an unselected skill does not activate it.
 
-Repeated links are useful routing, not duplicate rule definitions.
+Keep each rule defined in one canonical place. Place references to that definition wherever the rule actually applies. Repeated links are useful routing, not duplicate rule definitions.
 
-Prefer entry conditions that describe concrete work or decisions, and keep the route from that entry point to the required guidance explicit and shallow.
+Prefer concrete entry conditions and a shallow route to the required guidance.
 
 ## Example
 
@@ -27,7 +27,9 @@ repo/
     └── SKILL.md
 ```
 
-A shared writing rule can remain canonical in its external skill while both `planning/SKILL.md` and `review/SKILL.md` link to it directly.
+A request to review an implementation should be recognizable as review work without mentioning `SKILL.md`. The review entry can then link directly to a shared canonical writing rule.
+
+The same writing rule can remain canonical in its external skill while both `planning/SKILL.md` and `review/SKILL.md` link to it directly.
 
 `AGENTS.md` can also link to the same canonical rule when normal repository interaction needs it.
 
