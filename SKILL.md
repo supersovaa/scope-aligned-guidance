@@ -1,11 +1,11 @@
 ---
 name: scope-aligned-guidance
-description: Connect repository-local guidance to the concrete work types and directories that need it. Use when creating, moving, splitting, routing, or reviewing AGENTS.md, task skills, directory-local SKILL.md files, or references to canonical guidance.
+description: When creating, moving, splitting, or reviewing repository guidance, connect each canonical rule directly to the tasks and directories that need it.
 ---
 
 # Scope-aligned guidance
 
-Keep repository-local guidance connected to the work that needs it, using concrete task entry points and directory placement.
+Apply these rules when creating, moving, splitting, routing, or reviewing repository instructions such as `AGENTS.md`, task skills, directory-local `SKILL.md` files, and links to canonical guidance.
 
 ## Core rule
 
