@@ -1,11 +1,11 @@
 ---
 name: scope-aligned-guidance
-description: Connect repository-local guidance to the concrete work types and directories that need it. Use when creating, moving, splitting, routing, or reviewing AGENTS.md, task skills, directory-local SKILL.md files, or references to canonical guidance.
+description: Use when writing, organizing, or reviewing repository instructions, skills, or links to guidance.
 ---
 
 # Scope-aligned guidance
 
-Keep repository-local guidance connected to the work that needs it, using concrete task entry points and directory placement.
+When a task or directory needs a rule, connect its entry point to the canonical definition. Apply this when creating, moving, splitting, routing, or reviewing guidance in `AGENTS.md`, task skills, and directory-local `SKILL.md` files.
 
 ## Core rule
 
@@ -17,7 +17,7 @@ Keep one canonical definition for each rule.
 
 When a rule is needed at multiple entry points, link its canonical definition directly from each one.
 
-Choose activation conditions from the recognizable purpose and responsibility of the work, including work necessary to fulfill the request even when not explicitly named. Use work types as the default activation units rather than conditions tied to individual decisions during execution.
+Choose activation conditions from the recognizable purpose and responsibility of the work, including work necessary to fulfill the request even when not explicitly named. Link the skill from the work-type entry. Inside the skill, place conditions on the procedures they govern so they can be evaluated when the relevant facts become available.
 
 ## Route from concrete entry points
 
